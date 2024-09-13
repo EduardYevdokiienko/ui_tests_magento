@@ -1,6 +1,6 @@
 import allure
-from pages.base_page import BasePage
-from pages.locators import AccountLocators as loc
+from .base_page import BasePage
+from .locators import AccountLocators as loc
 
 
 class AccountPage(BasePage):

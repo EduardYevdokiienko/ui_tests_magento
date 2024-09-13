@@ -1,14 +1,14 @@
 import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-from pages.create_nc_account_page import CreateAccountPage
-from pages.account_page import AccountPage
-from pages.ef_collection_page import EcoFriendlyCollectionPage
-from pages.card_page import CartPage
-from pages.sale_page import SalePage
-from pages.men_deal_page import MenDealPage
-from pages.women_deal_page import WomenDealPage
-from pages.acc_error_page import AccountErrorPage
+from .pages.create_nc_account_page import CreateAccountPage
+from .pages.account_page import AccountPage
+from .pages.ef_collection_page import EcoFriendlyCollectionPage
+from .pages.card_page import CartPage
+from .pages.sale_page import SalePage
+from .pages.men_deal_page import MenDealPage
+from .pages.women_deal_page import WomenDealPage
+from .pages.acc_error_page import AccountErrorPage
 
 
 @pytest.fixture()

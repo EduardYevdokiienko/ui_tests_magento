@@ -1,7 +1,7 @@
 import allure
 from selenium.webdriver.common.by import By
-from pages.base_page import BasePage
-from pages.locators import CartLocators as loc
+from .base_page import BasePage
+from .locators import CartLocators as loc
 from selenium.webdriver.common.action_chains import ActionChains
 
 

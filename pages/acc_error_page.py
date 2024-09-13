@@ -1,6 +1,6 @@
 import allure
-from pages.base_page import BasePage
-from pages.locators import CartLocators as loc
+from .base_page import BasePage
+from .locators import CartLocators as loc
 
 
 class AccountErrorPage(BasePage):
