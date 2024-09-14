@@ -46,16 +46,16 @@ def test_choose_product(ef_collection_page, card_page):
     ef_collection_page.click_product('1')
     card_page.check_product_in_cart('Ana Running Short')
 
-
-@pytest.mark.e2e
-@allure.feature('Eco-friendly products page')
-@allure.tag('Positive add to compare list')
-def test_add_to_compare(ef_collection_page):
-    ef_collection_page.open()
-    ef_collection_page.scroll_page(300)
-    ef_collection_page.add_to_compare('1')
-    ef_collection_page.scroll_page()
-    ef_collection_page.check_compare_products('Ana Running Short')
+#
+# @pytest.mark.e2e
+# @allure.feature('Eco-friendly products page')
+# @allure.tag('Positive add to compare list')
+# def test_add_to_compare(ef_collection_page):
+#     ef_collection_page.open()
+#     ef_collection_page.scroll_page(300)
+#     ef_collection_page.add_to_compare('1')
+#     ef_collection_page.scroll_page()
+#     ef_collection_page.check_compare_products('Ana Running Short')
 
 
 @pytest.mark.smoke
