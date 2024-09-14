@@ -1,6 +1,8 @@
 import allure
+import pytest
 
 
+@pytest.mark.smoke
 @allure.feature('Registration page')
 @allure.tag('Positive opened registration page')
 def test_form_is_able(create_account_page):
@@ -8,6 +10,7 @@ def test_form_is_able(create_account_page):
     create_account_page.check_form_is_able('Create New Customer Account')
 
 
+@pytest.mark.e2e
 @allure.feature('Registration page')
 @allure.tag('Positive registration')
 def test_create_new_customer_form(create_account_page, account_page):
@@ -21,6 +24,7 @@ def test_create_new_customer_form(create_account_page, account_page):
     account_page.check_registration_success('Thank you for registering with Main Website Store.')
 
 
+@pytest.mark.smoke
 @allure.feature('Registration page')
 @allure.tag('Negative registration with wrong conformation password')
 def test_wrong_confirm_password(create_account_page):
@@ -34,6 +38,7 @@ def test_wrong_confirm_password(create_account_page):
     create_account_page.password_confirmation_error('Please enter the same value again.')
 
 
+@pytest.mark.smoke
 @allure.feature('Eco-friendly products page')
 @allure.tag('Positive choose product')
 def test_choose_product(ef_collection_page, card_page):
@@ -42,6 +47,7 @@ def test_choose_product(ef_collection_page, card_page):
     card_page.check_product_in_cart('Ana Running Short')
 
 
+@pytest.mark.e2e
 @allure.feature('Eco-friendly products page')
 @allure.tag('Positive add to compare list')
 def test_add_to_compare(ef_collection_page):
@@ -52,6 +58,7 @@ def test_add_to_compare(ef_collection_page):
     ef_collection_page.check_compare_products('Ana Running Short')
 
 
+@pytest.mark.smoke
 @allure.feature('Eco-friendly products page')
 @allure.tag('Negative add to wish list')
 def test_add_to_wish_list(ef_collection_page, ac_error_page):
@@ -61,6 +68,7 @@ def test_add_to_wish_list(ef_collection_page, ac_error_page):
     ac_error_page.add_to_wish_list_failed('You must login or register to add items to your wishlist.')
 
 
+@pytest.mark.e2e
 @allure.feature('Sale page')
 @allure.tag('Positive open sale page')
 def test_open_sale_page(sale_page):
@@ -68,6 +76,7 @@ def test_open_sale_page(sale_page):
     sale_page.check_sale_page_able('Sale')
 
 
+@pytest.mark.smoke
 @allure.feature('Sale page')
 @allure.tag('Positive verify sale')
 def test_check_sale(sale_page):
@@ -76,6 +85,7 @@ def test_check_sale(sale_page):
     sale_page.verify_percent_of_sale('20')
 
 
+@pytest.mark.e2e
 @allure.feature('Sale page')
 @allure.tag('Positive open choose men deals')
 def test_men_deals_able(sale_page, men_deal_page):
@@ -85,6 +95,7 @@ def test_men_deals_able(sale_page, men_deal_page):
     men_deal_page.check_men_page_opened('Men Sale')
 
 
+@pytest.mark.smoke
 @allure.feature('Sale page')
 @allure.tag('Positive open choose women deals')
 def test_women_deals_able(sale_page, women_deal_page):
