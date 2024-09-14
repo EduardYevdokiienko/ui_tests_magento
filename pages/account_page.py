@@ -7,8 +7,8 @@ class AccountPage(BasePage):
     page_url = '/customer/account/'
 
     @allure.step('Account page')
-    def check_registration_success(self, reg_success):
-        assert reg_success in self.find(loc.REG_SUCCESS).text
+    def check_registration_success(self, reg_massage):
+        assert reg_massage in self.find(loc.REG_SUCCESS).text
 
     def check_page_title(self, page_title):
         assert page_title in self.find(loc.PAGE_TITLE).text

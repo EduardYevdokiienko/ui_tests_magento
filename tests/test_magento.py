@@ -17,7 +17,7 @@ def test_create_new_customer_form(create_account_page, account_page):
     create_account_page.open()
     create_account_page.fill_first_name('eduard')
     create_account_page.fill_last_name('y')
-    create_account_page.fill_email('edddd@gmail.com')
+    create_account_page.fill_email('eeeydddddd@gmail.com')
     create_account_page.fill_password('EDU1111edu')
     create_account_page.fill_confirm_password('EDU1111edu')
     create_account_page.click_create()
